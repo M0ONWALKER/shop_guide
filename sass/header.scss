@@ -1,0 +1,124 @@
+@mixin flexbox($justify_content: space-between){
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header{
+  background-image: url("../images/bg.jpg");
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+}
+
+.header__navigate{
+  @include flexbox;
+  width: 80%;
+  margin: 0 auto;
+}
+.navigate__socmedia{
+  width: 40px;
+  border: 1px solid #8a7f73; border-radius: 5px;
+  margin: 35px 5px 0px 10px;
+}
+.navigate__socmedia:hover{
+  border-color: white;
+}
+.navigate__button{
+  margin: 0;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid white; border-radius: 5px;
+  margin-top: 30px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px; word-spacing: 2px;
+  transition: 0.5s;
+}
+.navigate__button:hover{
+  background: white;
+  color: black;
+}
+
+.header__main_content{
+  @include flexbox;
+  width: 75%;
+  margin: 0 auto;
+  color: white;
+}
+.main_content__desc_text{
+  display: inline-block;
+  float: right;
+  font-size: 12px; padding: 5px;
+  background: #29d3d1;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+.main_content__desc_text:before{
+  content: " ";
+  border-left: 15px solid #29d3d1;
+  border-bottom: 20px solid transparent;
+}
+
+.main_content__logo{
+  text-align: center;
+  margin-top: 15px;
+}
+.main_content__download_text{
+  margin: 5px 0px 15px 0px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+.main_content__download_text:before{
+  content: " ";
+  width: 45%;
+  margin-right: 20px;
+  border-bottom: 1px solid #8a7f73;
+}
+.main_content__download_text:after{
+  content: " ";
+  width: 45%;
+  margin-left: 20px;
+  border-bottom: 1px solid #8a7f73;
+}
+.main_content__download_block{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+.main_content__download_logo{
+  margin: 0 10px;
+  width: 195px;
+  border: 1px solid #8a7f73; border-radius: 5px;
+}
+.main_content__download_logo:hover{
+  border-color: white;
+}
+.main_content__phone_1{
+  position: relative;
+  z-index: 0;
+  top: 100px;
+}
+
+@media (max-width: 1200px) {
+  .header__navigate, .main_content__phone_1{
+    display: none;
+  }
+  .header__main_content{
+    width: 100%;
+  }
+  .main_content__sidebar{
+    margin: 120px auto;
+  }
+}
+@media (max-width: 670px) {
+  .main_content__sidebar{
+    width: 70%;
+  }
+}

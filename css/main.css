@@ -1,0 +1,10 @@
+.main {
+  margin-top: -25px;
+  background-image: url("../images/bg2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 2; }
+
+/*# sourceMappingURL=main.css.map */
